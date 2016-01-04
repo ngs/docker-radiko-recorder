@@ -1,0 +1,1 @@
+0 21 * * mon /bin/sh -c 'source /Users/ngs/dotfiles/env.d/secret/env.sh && /usr/local/bin/docker run --rm -v /Users/ngs/Dropbox/radiko:/var/radiko atsnngs/radiko-recorder ALPHA-STATION 1 $RADIKO_LOGIN $RADIKO_PASSWORD | tee "/Users/ngs/Dropbox/radiko-$(date +%Y%m%d-%H%M%S).log"'
