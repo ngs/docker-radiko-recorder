@@ -11,6 +11,8 @@ RUN git clone git://github.com/matthiaskramm/swftools.git swftools && cd swftool
 RUN echo '/usr/local/lib' > /etc/ld.so.conf.d/local.conf && ldconfig
 ADD rec_radiko2.sh /usr/local/bin/rec_radiko2.sh
 RUN chmod +x /usr/local/bin/rec_radiko2.sh
+ADD rec_nhkfm.sh /usr/local/bin/rec_nhkfm.sh
+RUN chmod +x /usr/local/bin/rec_nhkfm.sh
 RUN mkdir /var/radiko
 WORKDIR /var/radiko
 ENTRYPOINT ["/usr/local/bin/rec_radiko2.sh"]

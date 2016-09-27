@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 pid=$$
 date=`date '+%Y-%m-%d-%H_%M'`
 playerurl=http://radiko.jp/player/swf/player_4.1.0.00.swf
@@ -36,7 +38,6 @@ Logout () {
     echo "=== Logout: radiko.jp ==="
 }
 
-
 if [ $# -le 3 ]; then
   echo "usage : $0 channel_name duration(minuites) mail password [outputdir] [prefix]"
   exit 1
@@ -55,6 +56,11 @@ fi
 PREFIX=${channel}
 if [ $# -ge 6 ]; then
   PREFIX=$6
+fi
+
+if [ channel  = "NHK-FM" ]; then
+  eval "sh $(dirname $0)/rec_nhkfm.sh" $1 $outdir $PREFIX
+  exit
 fi
 
 ###
