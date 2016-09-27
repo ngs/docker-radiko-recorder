@@ -1,9 +1,9 @@
 docker-radiko-recorder
 ======================
 
-Dockerfile of Radiko Recorder based on Ubuntu
+[![Docker Automated build](https://img.shields.io/docker/automated/atsnngs/radiko-recorder.svg?maxAge=2592000)](https://hub.docker.com/r/atsnngs/radiko-recorder/)
 
-https://hub.docker.com/r/atsnngs/radiko-recorder/
+Dockerfile of Radiko Recorder based on Ubuntu
 
 ```sh
 docker pull atsnngs/radiko-recorder
